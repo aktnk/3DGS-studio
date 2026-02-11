@@ -1,0 +1,12 @@
+[package]
+name = "ai"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+core = { path = "../core" }
+# 重要: features = ["ndarray"] を追加してください
+ort = { version = "2.0.0-rc.9", features = ["ndarray"] } 
+ndarray = "0.15"
+image = { workspace = true }
+anyhow = { workspace = true }

@@ -1,0 +1,9 @@
+[package]
+name = "video"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# ワークスペースで定義した依存関係を利用
+serde_json = { workspace = true }
+anyhow = { workspace = true }

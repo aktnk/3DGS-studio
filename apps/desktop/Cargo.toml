@@ -1,0 +1,13 @@
+[package]
+name = "desktop"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 内部の共通ライブラリを相対パスで指定
+core = { path = "../../crates/core" }
+gui = { path = "../../crates/gui" }
+
+# ワークスペースで定義した共通ライブラリを利用
+anyhow = { workspace = true }
+eframe = { workspace = true }

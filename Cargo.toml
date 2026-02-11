@@ -1,0 +1,38 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/video",
+    "crates/gui",
+    "crates/ai",
+    "apps/cli",
+    "apps/desktop",
+]
+resolver = "2"
+
+# ワークスペース全体で共通して使うライブラリのバージョンをここで定義
+[workspace.dependencies]
+# シリアライズ・デシリアライズ
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+
+# エラーハンドリングとログ
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.11"
+
+# 画像・動画関連の基本ライブラリ
+image = "0.25"
+pathbuf = "1.0"
+
+# CLI関連
+clap = { version = "4.5", features = ["derive"] }
+
+# GUI eguiの実行フレームワーク
+eframe = { version = "0.28", features = ["glow", "persistence"] }
+egui_extras = { version = "0.28", features = ["all_loaders"] }
+
+# 非同期処理 (GUIとロジックの分離に必要)
+tokio = { version = "1.37", features = ["full"] }
+
+# ffprobe 解析用
+serde_json = "1.0"

@@ -24,9 +24,10 @@ target
 target/
 workspaces/*/frames/
 workspaces/*/masks/
+workspaces/*/project.yaml
 
 # モデルデータ（巨大なバイナリ）
-assets/models/*.onnx
+assets/models/sam2/*.onnx
 
 # 元動画
 workspaces/*/input/
